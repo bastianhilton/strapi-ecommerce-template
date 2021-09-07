@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_gift_message_gift_messages",
+  "info": {
+    "name": "Gift_Message",
+    "icon": "text-height"
+  },
+  "options": {},
+  "attributes": {
+    "message": {
+      "type": "richtext"
+    }
+  }
+}

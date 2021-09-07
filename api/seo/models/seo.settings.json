@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "seos",
+  "info": {
+    "name": "Category",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "SEO": {
+      "type": "component",
+      "repeatable": true,
+      "component": "seo.seo"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "Name"
+    },
+    "products": {
+      "via": "categories",
+      "collection": "product"
+    },
+    "blogs": {
+      "via": "categories",
+      "collection": "blog"
+    }
+  }
+}

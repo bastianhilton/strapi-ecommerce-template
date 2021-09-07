@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "invoices",
+  "info": {
+    "name": "Invoice"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "date": {
+      "type": "datetime"
+    },
+    "Order_Date": {
+      "type": "datetime"
+    },
+    "Status": {
+      "type": "enumeration",
+      "enum": [
+        "Unpaid",
+        "Paid",
+        "Pending_Payment"
+      ]
+    },
+    "Grand_Total_Base": {
+      "type": "decimal"
+    },
+    "Grand_Total_Purchased": {
+      "type": "decimal"
+    },
+    "order": {
+      "via": "invoice",
+      "model": "order"
+    },
+    "transactions": {
+      "via": "invoices",
+      "collection": "transactions"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "transactions",
+  "info": {
+    "name": "Transactions"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "products": {
+      "collection": "product",
+      "via": "transactions",
+      "dominant": true
+    },
+    "orders": {
+      "collection": "order",
+      "via": "transactions",
+      "dominant": true
+    },
+    "invoices": {
+      "collection": "invoice",
+      "via": "transactions",
+      "dominant": true
+    },
+    "users_permissions_users": {
+      "plugin": "users-permissions",
+      "collection": "user",
+      "via": "transactions",
+      "dominant": true
+    }
+  }
+}

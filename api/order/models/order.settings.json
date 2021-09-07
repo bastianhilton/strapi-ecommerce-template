@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "orders",
+  "info": {
+    "name": "Order",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "phone": {
+      "type": "biginteger"
+    },
+    "zipcode": {
+      "type": "biginteger"
+    },
+    "country": {
+      "type": "string"
+    },
+    "state_provision": {
+      "type": "string"
+    },
+    "signed_up_point": {
+      "type": "string"
+    },
+    "website": {
+      "type": "string"
+    },
+    "invoice": {
+      "via": "order",
+      "model": "invoice"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "transactions": {
+      "via": "orders",
+      "collection": "transactions"
+    }
+  }
+}

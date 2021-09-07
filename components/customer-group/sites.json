@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_sites_sites",
+  "info": {
+    "name": "Customer_Group",
+    "icon": "compress",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Group": {
+      "type": "enumeration",
+      "enum": [
+        "General",
+        "Retailer",
+        "Wholesale"
+      ]
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "shipments",
+  "info": {
+    "name": "Shipment"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Ship_Date": {
+      "type": "datetime"
+    },
+    "Order_Date": {
+      "type": "datetime"
+    },
+    "users_permissions_user": {
+      "via": "shipment",
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "Total_Quantity": {
+      "type": "integer"
+    },
+    "orders": {
+      "collection": "order"
+    }
+  }
+}
