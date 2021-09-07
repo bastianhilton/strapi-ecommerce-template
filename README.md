@@ -11,7 +11,9 @@ What does this template include:
 # How to Use:
 
 Using Yarn
+
 yarn create strapi-app my-app-name --template bastianhilton/strapi-ecommerce-template
 
 Or using NPM
+
 npx create-strapi-app my-app-name --template bastianhilton/strapi-ecommerce-template
