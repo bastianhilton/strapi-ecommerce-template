@@ -8,10 +8,10 @@ What does this template include:
 - Comment Plugin installed by default (https://github.com/VirtusLab-Open-Source/strapi-plugin-comments)
 - Added CKeditor5 plugin by default (https://github.com/Roslovets-Inc/strapi-plugin-ckeditor5)
 
-How to Use:
+# How to Use:
 
-# Using Yarn
+Using Yarn
 yarn create strapi-app my-app-name --template bastianhilton/strapi-ecommerce-template
 
-# Or using NPM
+Or using NPM
 npx create-strapi-app my-app-name --template bastianhilton/strapi-ecommerce-template
